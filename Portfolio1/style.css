@@ -28,7 +28,6 @@ main {
   width: 100svw;
   min-height: 12svh;
   padding-bottom: 1rem;
-  ;
 }
 
 .logo {
@@ -83,7 +82,6 @@ main {
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 #button-hero {
   margin-top: 5rem;
@@ -280,7 +278,6 @@ main {
   margin-top: 3rem;
   margin-bottom: 3rem;
   margin-left: 2rem;
-
 }
 
 .text-container > h3 {
@@ -527,7 +524,7 @@ main {
   gap: 1rem;
 }
 
-.flex-text{
+.flex-text {
   display: none;
 }
 
@@ -560,12 +557,12 @@ dienst-question,
 
   .header-bar {
     min-height: 0svh;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
   }
 
   .logo > p {
     display: flex;
-    margin-top: 3%;
+    margin-top: 2%;
     margin-left: 2%;
     color: white;
     text-transform: uppercase;
@@ -574,18 +571,18 @@ dienst-question,
   }
   .svg-logo {
     margin-top: 1%;
-    width: 7%;
-    height: 7%;
+    margin-bottom: 1%;
+    width: 6%;
+    height: 6%;
   }
 
-  .hero-part {
-  }
+
 
   .hero {
     background-image: url(Assets/plumbing-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 102.5%;
+    width: 100%;
     min-height: 100svh;
     height: auto;
   }
@@ -618,6 +615,59 @@ dienst-question,
     height: 50svh;
     width: auto;
   }
+
+  .usp-part {
+    width: 100%;
+    padding-top: 4rem;
+    background-color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+  }
+
+  .usp-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    max-width: 80%;
+    justify-items: center;
+  }
+
+  .circle-bg {
+    display: flex;
+    flex-direction: column;
+    background-color: #64b7b5;
+    border-radius: 50%;
+    width: 6rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .usp-container p{
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .circle-bg:hover {
+    transform: scale(1.05);
+  }
+
+  .circle-bg img {
+    width: 40%;
+    height: auto;
+  }
+
+
 
   /*diensten*/
   .diensten-part {
@@ -667,7 +717,7 @@ dienst-question,
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     padding: 2rem 6rem;
-    margin-top: 5%;
+    margin-top: 4%;
     width: 100svw;
     margin-bottom: 2%;
   }
@@ -729,15 +779,50 @@ dienst-question,
     padding: 5% 0;
   }
 
-  .contact-grid{
+  .contact-grid {
     width: 80svw;
     gap: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .flex-text{
+  .flex-text {
     display: grid;
     grid-template-rows: 0.05fr 1fr;
+  }
+
+  .footer-part {
+    display: flex;
+    background-color: #499e9c;
+    align-items: center;
+    width: 100svw;
+    height: 15svh;
+  }
+
+  .company-header {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    width: 18%;
+    gap: 2%;
+    margin-left: 3%;
+  }
+
+  .company-information {
+    margin-top: 9%;
+
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plumbing-logo {
+    width: 90%;
+  }
+
+  .company-information p {
+    margin: 0px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgb(27, 27, 27);
   }
 }
