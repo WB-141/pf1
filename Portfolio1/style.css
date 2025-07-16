@@ -144,7 +144,6 @@ main {
 
 /** DIENSTEN FIX **/
 .diensten-part {
-  background-color: #fbfbfb;
   padding: 1rem 0;
   width: 100%;
 }
@@ -200,7 +199,7 @@ main {
 .dienst-question {
   display: flex;
   align-items: center;
-  background-color: #ededed;
+  background-color: #f6f6f6;
   font-weight: 600;
   padding: 1rem;
   width: 100%;
@@ -237,6 +236,7 @@ main {
 .dienst-answer.open {
   max-height: 1000px;
   padding: 1rem;
+  max-width: 98%;
 }
 
 .dienst-answer > p {
@@ -261,28 +261,46 @@ main {
 }
 
 .text-container {
-  margin-left: auto;
+  margin: 0 auto;
   border-radius: 12px;
   width: 85%;
   max-width: 100%;
-  background-color: #ececec;
   padding: 1rem;
-  margin-right: auto;
-  outline: 1px solid #d1d1d1;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.305);
-}
-
-.stagebedrijf {
-  width: 40%;
-  margin: 0 auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  margin-left: 2rem;
 }
 
 .text-container > h3 {
   margin: 0px;
   padding: 0px;
+}
+
+.text-container > p {
+  font-size: 0.9rem;
+}
+
+.right-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.social-footer {
+
+  display: flex;
+  background-color: #edebeb;
+  width: 100%;
+  height: 10svh;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 12%;
+  margin-left: auto;
+
+
 }
 /* REVIEWS */
 
@@ -291,13 +309,12 @@ main {
   height: 160svh;
   background-color: #88bebc;
   width: 100%;
-  margin-top: 0.8rem;
   overflow: hidden;
   padding-bottom: 0.8rem;
 }
 
 .review-square {
-  height: 100%;
+  height: 50%;
   width: 40svw;
 
   position: absolute;
@@ -545,7 +562,7 @@ main {
   box-shadow: 0 0 0 2px #4a989662;
 }
 
-dienst-question,
+.dienst-question,
 .dienst-items {
   width: 98%; /* ipv 100svw */
 }
@@ -576,10 +593,8 @@ dienst-question,
     height: 6%;
   }
 
-
-
   .hero {
-    background-image: url(Assets/plumbing-bg.jpg);
+    background-image: url(Assets/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -588,6 +603,11 @@ dienst-question,
   }
 
   .hero-overlay {
+    height: 100svh;
+    backdrop-filter: blur(5px);
+  }
+
+  .hero-part {
     height: 100svh;
   }
 
@@ -617,19 +637,29 @@ dienst-question,
   }
 
   .usp-part {
-    width: 100%;
+    width: 70svw;
     padding-top: 4rem;
-    background-color: #fbfbfb;
+
     display: flex;
-    justify-content: center;
+    margin-left: 10%;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 3%;
   }
 
   .usp-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-    max-width: 80%;
-    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10%;
+    max-width: 90%;
+    margin-right: auto;
+  }
+
+  .usp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .circle-bg {
@@ -637,7 +667,7 @@ dienst-question,
     flex-direction: column;
     background-color: #64b7b5;
     border-radius: 50%;
-    width: 6rem;
+    width: 7rem;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
@@ -647,8 +677,8 @@ dienst-question,
     margin-left: auto;
     margin-right: auto;
   }
-  
-  .usp-container p{
+
+  .usp-container p {
     display: flex;
     margin-top: 2rem;
     flex-direction: column;
@@ -660,6 +690,7 @@ dienst-question,
 
   .circle-bg:hover {
     transform: scale(1.05);
+    background-color: #dbdbdb;
   }
 
   .circle-bg img {
@@ -667,63 +698,116 @@ dienst-question,
     height: auto;
   }
 
-
-
   /*diensten*/
+
+  .upper-page {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    width: 100%;
+  }
+
+  .background-diensten {
+    display: flex;
+    overflow: hidden;
+    z-index: 0;
+    height: auto;
+
+    width: 100%;
+    background-color: rgb(229, 229, 229);
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .review-holder {
+    display: none;
+    width: 90%;
+  }
+
+  .panel-left {
+    margin-left: 8%;
+    height: 100%;
+    width: 100%;
+    min-width: 40%;
+    padding: 1rem;
+    margin-top: 5%;
+
+    align-items: center;
+    justify-content: center;
+
+    display: grid;
+    grid-template-rows: 1.5fr 0.9fr;
+  }
+
+  .stagebedrijf {
+    width: 60%;
+    min-width: 40%;
+    margin-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .reviewbox {
+    width: 80%;
+    height: 100%;
+  }
+
+  .diensten {
+    height: 87svh;
+  }
+
   .diensten-part {
-    background-color: #fbfbfb;
     margin-top: 2rem;
     z-index: 3;
-    padding-bottom: 5rem;
   }
 
   .dienst-title h2 {
     margin-top: 1rem;
     font-size: 2rem;
     margin-bottom: 1rem;
+    margin-right: 3rem;
   }
 
   .dienst-board {
     margin: 0px;
-    background-color: #fbfbfb;
+    margin: 0 auto;
+    transform: translateY(-6%);
   }
 
   .question {
-    width: auto;
+    width: 90%;
     padding: 0px;
   }
 
   /* wdw*/
   .wdw-grid {
     margin: 0 auto;
-    width: 60%;
+    width: 90%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 1rem;
   }
 
-  .stagebedrijf {
-    display: flex;
-    width: 10%;
-    margin-top: 3rem;
-    margin-left: 21%;
-  }
   /*review*/
+  .review-square{
+    height: 100%;
+  }
   .review-part {
-    height: 65svh;
+    height: 95svh;
     width: 100svw;
   }
   .review-grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     padding: 2rem 6rem;
-    margin-top: 4%;
+    margin: auto 0;
+    justify-content: center;
+    align-items: center;
     width: 100svw;
-    margin-bottom: 2%;
+
   }
   .review-card {
     width: 100%;
-    height: 78%;
+    height: 50%;
     margin: 0 auto;
   }
 
