@@ -5,7 +5,7 @@ function accordion() {
     question.addEventListener("click", () => {
       const answer = question.nextElementSibling;
       const icon = question.querySelector(".icon");
-      
+
       document.querySelectorAll(".dienst-answer").forEach((el) => {
         if (el !== answer) el.classList.remove("open");
       });
@@ -19,5 +19,18 @@ function accordion() {
     });
   });
 }
+
+function contactForm() {
+
+  const element = document.getElementsByClassName("cta-button")[0];
+
+  element.addEventListener("click", () => {
+    document
+      .querySelector(".contact")
+      .scrollIntoView({ behavior: "smooth" });
+  });
+}
+
+contactForm();
 
 accordion();

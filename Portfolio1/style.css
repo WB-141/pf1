@@ -199,7 +199,7 @@ main {
 .dienst-question {
   display: flex;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: #ffffff;
   font-weight: 600;
   padding: 1rem;
   width: 100%;
@@ -219,6 +219,16 @@ main {
 .dienst-question .icon {
   margin-right: 1rem;
   font-weight: bold;
+}
+
+.copyright{
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .dienst-answer {
@@ -284,6 +294,32 @@ main {
   min-height: 100%;
 }
 
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 180px;
+  max-width: 15svw;
+  margin-top: 5%;
+  width: auto;
+  height: 5svh;
+  background-color: #4a9896;
+  color: white;
+  border-radius: 8pX;
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+
+.box:hover{
+  transform: translateY(-2px);
+  background-color: #3e837f;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+#svg-icon{
+  margin-left: -1rem;
+  margin-right: 1rem;
+}
 .social-footer {
 
   display: flex;
@@ -297,9 +333,9 @@ main {
 .social-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 12%;
+  width: 8%;
   margin-left: auto;
-
+  margin-right: 3%;
 
 }
 /* REVIEWS */
@@ -395,19 +431,32 @@ main {
 .star-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2%;
   width: 60%;
-  margin-top: 0.6rem;
+  margin: auto 0;
   margin-left: 1rem;
 }
 
 .star-grid img {
-  width: 1.8rem;
+  width: 1.4rem;
 }
 
 .review-text {
   display: grid;
   grid-template-rows: auto;
   gap: 1px;
+}
+
+.review-part{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-part span{
+  transform: translateY(-17rem);
+  font-size: 1.9rem;
+  font-weight: 500;
 }
 
 .review-text h2 {
@@ -422,6 +471,7 @@ main {
   margin-left: 1rem;
   font-size: 0.9rem;
   max-width: 85%;
+  font-style: italic;
 }
 
 /* WIE ZIJN WIJ*/
@@ -704,6 +754,8 @@ main {
     display: grid;
     grid-template-columns: 0.4fr 1fr;
     width: 100%;
+    height:auto;
+    min-height: 100svh;
   }
 
   .background-diensten {
@@ -802,12 +854,15 @@ main {
     margin: auto 0;
     justify-content: center;
     align-items: center;
-    width: 100svw;
+    width: 100%;
 
   }
   .review-card {
     width: 100%;
-    height: 50%;
+    min-height: 50%;
+    max-height: 90%;
+    padding-bottom: 2rem;
+    height: auto;
     margin: 0 auto;
   }
 
@@ -842,6 +897,7 @@ main {
 
   .wzw-overlay {
     height: 80svh;
+    backdrop-filter: blur(5px);
   }
 
   .wzw-container > h3 {
@@ -855,7 +911,9 @@ main {
   }
 
   .cta-button {
+    display: flex;
     margin-top: 4rem;
+
   }
 
   /*Contact*/
@@ -873,6 +931,12 @@ main {
   .flex-text {
     display: grid;
     grid-template-rows: 0.05fr 1fr;
+  }
+
+  #hero-envelope{
+    margin-left: -0.3rem;
+    margin-right: 0.87rem;
+
   }
 
   .footer-part {
